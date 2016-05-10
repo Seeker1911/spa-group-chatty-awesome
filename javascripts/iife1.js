@@ -4,14 +4,14 @@ var chatty = (function(newchatty) {
 
 	}
 
-	function executeThisCodeAfterFileIsLoaded () {
+	function executeThisCodeAfterFileIsLoaded (messageData) {
 //		var dataArray = JSON.parse(this.responseText).messages;
 //		var messageList = document.getElementById("messageCon");
     let dataArray = messageData.messages;
-	  for(index in dataArray) {
-			//var messageData = "";
+	  for(var index in dataArray) {
+      var messageData = "";
 	    var messageObject = dataArray[index];
-	    for (key in messageObject) {
+	    for (var key in messageObject) {
 	      var output = messageObject[key];
         newchatty.addMsg(output);
 	    }
