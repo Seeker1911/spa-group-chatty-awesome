@@ -16,11 +16,13 @@ $('#messageCon').append('<p>' + userText + '<button class="deleteButton">Delete<
     return messages;
   }
 //remove item from array if delete button is clicked.
-  string.removeArray = function(event){
-    var remove =  messages.indexOf(event.srcElement.parentElement.innerText.replace('Delete', ''));
-    messages.splice(remove, 1);
+  //string.removeArray = function(event){
+    //var remove =  messages.indexOf(event.srcElement.parentElement.innerText.replace('Delete', ''));
+    //messages.splice(remove, 1);
+  $('.deleteButton').click(function(){
+    $('.deleteButton').siblings().remove();
+  })
     console.log("messages", messages);
-  }
    return string;
 })(chatty || {});
 

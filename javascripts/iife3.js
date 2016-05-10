@@ -5,7 +5,7 @@ var chatty = (function(chat) {
   chat.remove =  function removeButton(event) {
       event.target.parentNode.remove(event.parentNode);
       //call method in iife2 to delete from private array.
-      chatty.removeArray(event);
+      //chatty.removeArray(event);
       }
       return chat;
 }(chatty || {}));
